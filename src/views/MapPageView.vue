@@ -14,6 +14,7 @@
           <li class="list-group-item bg-light"> {{item.toUpperCase()}}</li>
           
        </div> -->
+  <FLDropDown v-bind:rooms="rooms"/>
   </div>
 </template>
 
@@ -22,10 +23,15 @@
 //hello
 // import FloorList from '@/components/FloorList.vue'
 // import FloorSB from '@/components/FloorSB.vue'
+
+import FLDropDown from '@/components/FLDropDown.vue'
+
 // import DropDRoomList from '@/components/DropDRoomList.vue'
+
 export default {
   name: 'MapPageView',
   components: {
+    FLDropDown,
   },
   data() {
       return { 
@@ -47,14 +53,16 @@ export default {
                 {Id:  "B1",
                 ruangan:["satpam, kantin"]}],
           
-        // search:''
+  
       }
 
     },
     computed: {
     filter() {
+
       // ID=this.id;
       // console.log(this.Lantai[this.id].ruangan);
+
       return this.Lantai[this.id].ruangan
       
     }

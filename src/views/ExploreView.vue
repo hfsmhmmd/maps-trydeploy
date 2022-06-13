@@ -14,6 +14,12 @@
           <li class="list-group-item bg-light">Lantai {{item.Id}} </li>
           </router-link>
        </div>
+<!-- 
+         <div v-for="item in room" :key="item.Id" class="card border-0 cardSpace" style="width: 18rem;">
+        <router-link v-bind:to="'/mappage/'+item.Id" >
+          <li class="list-group-item bg-light">Lantai {{item.Id}} </li>
+          </router-link>
+       </div> -->
 
   
   </div>
@@ -29,7 +35,7 @@ export default {
   },
   data() {
       return { 
-        room : null,
+        floors :[],
          Lantai: [{Id: "1",
                  ruangan:["lift", "administrasi, bank, perpustakaan"] },
                 {Id:  "2",
@@ -50,17 +56,24 @@ export default {
       }
 
     },
+
+
+     created() {
+        fetch('/ruangan.json').then(response => response.json())
+            .then((data) => this.floors = data);
+    },
+
+
   methods: {
     say: function (msg) {
       return (msg)
     }
-  },
-
-    computed:{
+  },   
+ computed:{
      filtered:function(){
-      //  return this.Lantai;
-    return this.Lantai.filter((lantai)=>{
-      // console.log(lantai.ruangan.length);
+      return this.floors.filter((lantai)=>{
+  
+      
       // console.log(this.search)
       for(var i = 0; i < lantai.ruangan.length; i++)
 {
@@ -81,6 +94,9 @@ export default {
   //   return "aha"
   //   }
   //  }
+
+
+
 }
 
 </script>
