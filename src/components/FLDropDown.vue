@@ -1,22 +1,31 @@
-<template v-for="(ruang,index) in lantai" :key="index">
-    <li>
-        {{ruang}}
-    </li>
+<template >
+<div>
 
-    
+  <b-dropdown id="dropdown-1" text="Ruangan" class="m-md-2">
+  <div v-for="(ruangan, i ) in rooms" :key="i" >
+    <b-dropdown-item>{{ruangan}}</b-dropdown-item>
+  </div>
+  </b-dropdown>
+</div>
 </template>
+
 
 <script >
 // import { defineComponent } from 'vue'
 
 export default {
-
     name: 'FLDropDown',
-    props: ['Lantai'],
+    props: ['rooms'],
     data(){
         return{
-            lantai:["Satu","Dua","Tiga"]
+            floora:[],
+            
         }
-    }
+    },    
 }
 </script>
+
+
+<style scoped>
+/* @import'~bootstrap/dist/css/bootstrap.css' */
+</style>

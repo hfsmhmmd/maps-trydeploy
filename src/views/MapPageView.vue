@@ -14,7 +14,8 @@
           <li class="list-group-item bg-light"> {{item.toUpperCase()}}</li>
           
        </div> -->
-  <FLDropDown v-bind:rooms="rooms"/>
+  <FLDropDown v-bind:rooms="rooms"/> 
+
   </div>
 </template>
 
@@ -32,28 +33,17 @@ export default {
   name: 'MapPageView',
   components: {
     FLDropDown,
+
   },
   data() {
       return { 
+        
         id:this.$route.params.id,
-         Lantai: [{Id: "1",
-                 ruangan:["lift", "administrasi, bank, perpustakaan"] },
-                {Id:  "2",
-                 ruangan:["lift", "dosen","ruang 201"] },
-                {Id:  "3",
-                 ruangan:["lift", "ruang 301"] },
-                {Id:  "4",
-                ruangan:["lift", "ruang 401","ruang 402","ruang 403","ruang 404","ruang 405","ruang 406","ruang 407","ruang 408","ruang 409" ]},
-                {Id:  "5",
-                ruangan:["lift", "ruang 501","ruang 502","ruang 503","ruang 505","ruang 505","ruang 506","ruang 507","ruang 508","ruang 509"]},
-                {Id:  "6",
-                ruangan:["lift", "ruang 601","ruang 602","ruang 603","ruang 606","ruang 605","ruang 606","ruang 607","ruang 608","ruang 609"]},
-                {Id:  "7",
-                ruangan:["lift", "ruang 701","ruang 702","ruang 703","ruang 707","ruang 705","ruang 706","ruang 707","ruang 708","ruang 709"]},
-                {Id:  "B1",
-                ruangan:["satpam, kantin"]}],
-          
-  
+        
+       rooms:[],
+        // rooms:this.floors[this.id],
+        // rooms:[],
+         
       }
 
     },
@@ -62,11 +52,16 @@ export default {
 
       // ID=this.id;
       // console.log(this.Lantai[this.id].ruangan);
-
-      return this.Lantai[this.id].ruangan
+      // this.rooms
+      return this.rooms;
       
     }
 },
+     created() {
+        fetch('/ruangan.json').then(response => response.json())
+            .then((data) => this.rooms = data[this.id-1].ruangan)
+            // .then(this.floors = this.rooms)
+    },
   // created() {
 
   //   console.log(this.data);
