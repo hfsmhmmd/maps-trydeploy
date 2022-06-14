@@ -5,10 +5,20 @@
   <div class=upperBar>
       <h2>Lantai {{$route.params.id}}</h2>
   </div>
-    <div>
-      <b-img src="../assets/lantai_7_putih.png" fluid alt="Responsive image"></b-img>
+    <div class=mapContainer>
+     <!--  src='../assets/Lt_'+5'.png' -->
+      <img 
+        :src="getImgUrl(this.id)">
+        <Modal v-if='item.show' @close="item.show = false">
+        <div slot='body'>
+          <img :src="getImgUrl(this.id)"/>
+        </div>        
+      </Modal>
     </div>
-    
+    <!-- <div>
+               <img :src="getImgUrl(this.id)" v-bind:alt="pic">
+    </div> -->
+
      <!-- <div v-for="item in filter" :key="item.Id" class="card border-0 cardSpace" style="width: 18rem;">
         
           <li class="list-group-item bg-light"> {{item.toUpperCase()}}</li>
@@ -37,7 +47,7 @@ export default {
   },
   data() {
       return { 
-        
+        // imgpath:'../assets/'+ Lt_5.png
         id:this.$route.params.id,
         
        rooms:[],
@@ -68,9 +78,10 @@ export default {
     
   // },
   methods: {
-    say: function (msg) {
-      return (msg)
-    }
+     getImgUrl(Id) {
+    var images = require.context('../assets/', false, /\.png$/)
+    return images('./Lt_' + Id + ".png")
+  }
   },
   // computed:{
     
@@ -107,6 +118,16 @@ export default {
 .fbar{
   margin-bottom: 20px;
   min-width: 93%;
+}
+
+img{
+  max-width: 90%;
+  border-radius: 5%;
+   object-fit: cover;
+}
+.mapContainer{
+  max-width:100%;
+  border: 5px solid black;
 }
    .f-list{ 
 /* display: flex;
