@@ -5,27 +5,27 @@
      },
      {
         "Id": "2" ,
-        "ruangan":["lift", "dosen","ruang 201"]
+        "ruangan":["lift", "dosen"," 201"]
      },
      {
         "Id": "3",
-        "ruangan":["lift", "ruang 301"]
+        "ruangan":["lift", " 301"]
      },
      {
         "Id": "4" ,
-        "ruangan":["lift", "ruang 401","ruang 402","ruang 403","ruang 404","ruang 405","ruang 406","ruang 407","ruang 408","ruang 409" ]
+        "ruangan":["lift", " 401"," 402"," 403"," 404"," 405"," 406"," 407"," 408"," 409" ]
      },
      {
         "Id": "5" , 
-        "ruangan":["lift", "ruang 501","ruang 502","ruang 503","ruang 505","ruang 505","ruang 506","ruang 507","ruang 508","ruang 509"]
+        "ruangan":["lift", " 501"," 502"," 503"," 505"," 505"," 506"," 507"," 508"," 509"]
      },
 
      {
         "Id": "6" ,
-        "ruangan":["lift", "ruang 601","ruang 602","ruang 603","ruang 606","ruang 605","ruang 606","ruang 607","ruang 608","ruang 609"]
+        "ruangan":["lift", " 601"," 602"," 603"," 606"," 605"," 606"," 607"," 608"," 609"]
      },
      {
         "Id": "7" ,
-        "ruangan":["lift", "ruang 701","ruang 702","ruang 703","ruang 707","ruang 705","ruang 706","ruang 707","ruang 708","ruang 709"]
+        "ruangan":["lift", " 701"," 702"," 703"," 707"," 705"," 706"," 707"," 708"," 709"]
      }
 ]

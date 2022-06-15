@@ -23,7 +23,7 @@ const routes = [
     component: MapPageView
   },
   {
-    path: '/roompage',
+    path: '/roompage/:id',
     name: 'roompage',
     component: RoomPageView
   },

@@ -5,16 +5,20 @@
   <div class=upperBar>
       <h2>Lantai {{$route.params.id}}</h2>
   </div>
+
+      <!-- <router-link v-bind:to="'/roompage/'+item.Id" > -->
+     
     <div class=mapContainer>
      <!--  src='../assets/Lt_'+5'.png' -->
       <img 
         :src="getImgUrl(this.id)">
-        <Modal v-if='item.show' @close="item.show = false">
+        <!-- <Modal v-if='item.show' @close="item.show = false">
         <div slot='body'>
           <img :src="getImgUrl(this.id)"/>
         </div>        
-      </Modal>
+      </Modal> -->
     </div>
+    
     <!-- <div>
                <img :src="getImgUrl(this.id)" v-bind:alt="pic">
     </div> -->
@@ -24,7 +28,11 @@
           <li class="list-group-item bg-light"> {{item.toUpperCase()}}</li>
           
        </div> -->
-  <FLDropDown v-bind:rooms="rooms"/> 
+      <!-- <router-link v-bind:to="'/roompage/'+item.Id" > -->
+        <!-- <router-link to="/roompage">   -->
+          <FLDropDown v-bind:rooms="rooms"/> 
+         <!-- </router-link> -->
+  
 
   </div>
 </template>

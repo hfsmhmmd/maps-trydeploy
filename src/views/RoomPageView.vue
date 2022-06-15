@@ -4,7 +4,7 @@
         <p>test</p> -->
         <div class="upper">
             <div class="roomtittle">
-                <h4>Mushola</h4>
+                <h4>{{this.id}}</h4>
             </div>
             <!-- <div class="imgCont"> -->
             <img src="https://placekitten.com/1000/300" alt="">
@@ -24,6 +24,13 @@ export default {
     components: {
         RoomDesc
     },
+    data()
+    {
+        return{
+         id:this.$route.params.id,   
+        }
+    }
+
 }
 </script>
 
@@ -54,7 +61,7 @@ export default {
     display: flex;
     /* border: 5px solid red; */
     justify-content: start;
-    color: white;
+    color: black;
 }
 
 
