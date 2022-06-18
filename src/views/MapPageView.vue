@@ -1,7 +1,7 @@
 <template>
   <div class="MapPage">
     
-    test ganti
+    
     
   <div class=upperBar>
       <h2>Lantai {{$route.params.id}}</h2>
