@@ -27,6 +27,7 @@ export default {
   background-color: white;
   height: 100%;
   /* border: 5px solid red; */
+  justify-content: center;
 }
 
 .logo{

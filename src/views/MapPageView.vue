@@ -132,7 +132,7 @@ img{
 }
 .mapContainer{
   max-width:100%;
-  border: 5px solid black;
+  /* border: 5px solid black; */
 }
    .f-list{ 
 /* display: flex;
