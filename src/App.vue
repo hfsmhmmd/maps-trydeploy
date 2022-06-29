@@ -51,7 +51,7 @@ html, body{
   color: #2c3e50;
   background-color:#0E47A1;
   height: 100%;
-  border: 5px solid green;
+  /* border: 5px solid green; */
     
 }
 nav{
