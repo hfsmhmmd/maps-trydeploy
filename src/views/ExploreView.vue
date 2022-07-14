@@ -9,18 +9,13 @@
     <!-- <div class="mt-2">Value: {{ text }}</div> -->
   </div>
 
-        <div v-for="item in filtered" :key="item.Id" class="card border-0 cardSpace" style="width: 18rem;">
-        <router-link v-bind:to="'/mappage/'+item.Id" >
-          <li class="list-group-item bg-light">Lantai {{item.Id}} </li>
-          </router-link>
-       </div>
-<!-- 
-         <div v-for="item in room" :key="item.Id" class="card border-0 cardSpace" style="width: 18rem;">
-        <router-link v-bind:to="'/mappage/'+item.Id" >
-          <li class="list-group-item bg-light">Lantai {{item.Id}} </li>
-          </router-link>
-       </div> -->
+      <div v-for="item in filtered" :key="item.Id" class="card border-0 cardSpace" style="width: 18rem;">
+        <router-link class="rout" v-bind:to="'/mappage/'+item.Id " >
+     
+          <li class="list-group-item">Lantai {{item.Id}} </li>
 
+        </router-link>
+       </div>
   
   </div>
 </template>
@@ -69,18 +64,10 @@ export default {
             
         }
 } 
-      // return lantai.Id.match(this.search);
-        // return lantai.ruangan.match(this.search); gabisa kalo object
-    //        
+
     });
     }
    }
-  // filtered:function(){
-  //   return "aha"
-  //   }
-  //  }
-
-
 
 }
 
@@ -88,9 +75,14 @@ export default {
 
 <style scoped>
 
-
+/* .sb-container{
+  background-color: rgb(71, 189, 71);
+} */
 .cardSpace{
   /* width: 100%;*/
+   background-color:white ;
+}
+.card{
    background-color:#0E47A1 ;
 }
 .list-group-item{
@@ -101,7 +93,12 @@ export default {
   text-align: start;
   font-size: 32px;
   font-weight: bold;
- 
+  /* background-color:  #0E47A1; */
+}
+
+.list-group-item:hover {
+  background-color: #81B1EF;
+  color: white;
 }
 
 .home{
@@ -128,4 +125,5 @@ export default {
 .sbform{
   border-radius: 30px;
 }
+
 </style>
