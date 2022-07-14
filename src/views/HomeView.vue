@@ -11,7 +11,7 @@
 
     <div class="menu">
       <div class="toUAICon" >
-        <!-- <div class="logo" href="http://uai.ac.id/"> -->
+        <!-- <div class="logo" href="http://uai.ac.id/"> -->  
         <a class="logo" href="http://uai.ac.id/">
           <!-- <img alt="UAI logo" src="../assets/gedungUAI.jpg"> -->
         <!-- </div> -->
@@ -26,9 +26,7 @@
           </h3> 
         </b-card-text>
   </b-card>
-
       </a>
-
 
       </div>
       <div class="bottomMenu">
