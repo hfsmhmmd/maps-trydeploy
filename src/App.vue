@@ -32,6 +32,7 @@ export default {
 <style scoped>
 #app{
    flex-direction: column;  
+    overflow:hidden;
 }
 
 .rout{
@@ -57,6 +58,7 @@ html, body{
   color: #2c3e50;
   background-color:#0E47A1;
   height: 100%;
+  overflow: scroll;
   /* border: 5px solid green; */
     
 }

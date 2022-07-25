@@ -6,9 +6,12 @@
             <div class="roomtittle">
                 <h4>{{this.id}}</h4>
             </div>
+            
             <!-- <div class="imgCont"> -->
-            <img src="https://placekitten.com/1000/300" alt="">
-            <!-- </div> -->
+            <!-- <img src="../assets/Lantai gedungUAI.jpg" alt=""> -->
+            
+            <img :src="require(`@/assets/Footage/Lantai ${floor}/${id}.jpg`)">
+        
         </div>
         <RoomDesc/>
         </div>
@@ -27,9 +30,16 @@ export default {
     data()
     {
         return{
-         id:this.$route.params.id,   
+         id:this.$route.params.room,   
+         floor:this.$route.params.id,  
         }
-    }
+    },
+    methods: {
+     getImgUrl(Id,floor) {
+    var images = require.context('../assets/Footage/Lantai '+floor, false, /\.png$/)
+    return images('./'+ Id + ".jpg")
+  }
+  },
 
 }
 </script>
@@ -52,10 +62,12 @@ export default {
     flex-direction: column;
     background-color:white;
     padding: 5px;
+    border-radius: 8px;
 }
-/* .img{
-    height: 200px;
-} */
+img{
+    max-height: 80%;
+    width: auto;
+}
 
 .roomtittle{
     display: flex;

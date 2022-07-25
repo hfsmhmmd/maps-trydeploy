@@ -16,32 +16,43 @@
 
         </router-link>
        </div>
-  
+    <!-- <div>
+      {{daxios}}
+    </div> -->
   </div>
 </template>
 
 <script >
-
+import axios from 'axios';
 export default {
   name: 'ExploreView',
   components: {
     // FloorList,
     // FloorSB,
+    
   },
   data() {
       return { 
         floors :[],
-  
+        info: [],
         search:''.toLowerCase(),
       }
 
     },
+       mounted () {
+    axios
+      .get('https://data.mongodb-api.com/app/data-rsvcw/endpoint/floorlist')
+      .then(response => (this.info = response.data))
+  },
 
 
-     created() {
-        fetch('/ruangan.json').then(response => response.json())
-            .then((data) => this.floors = data);
-    },
+
+    //  created() {
+    //     fetch('/ruangan.json').then(response => response.json())
+    //         .then((data) => this.floors = data);
+    // },
+
+
 
 
   methods: {
@@ -51,7 +62,7 @@ export default {
   },   
  computed:{
      filtered:function(){
-      return this.floors.filter((lantai)=>{
+      return this.info.filter((lantai)=>{
   
       
       // console.log(this.search)

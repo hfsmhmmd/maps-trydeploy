@@ -17,7 +17,7 @@
     </div>
     
     <!-- <div>
-               <img :src="getImgUrl(this.id)" v-bind:alt="pic">
+               <img :src="getImgUrl(th is.id)" v-bind:alt="pic">
     </div> -->
 
      <!-- <div v-for="item in filter" :key="item.Id" class="card border-0 cardSpace" style="width: 18rem;">
@@ -27,7 +27,8 @@
        </div> -->
       <!-- <router-link v-bind:to="'/roompage/'+item.Id" > -->
         <!-- <router-link to="/roompage">   -->
-          <FLDropDown v-bind:rooms="rooms"/> 
+          <FLDropDown :rooma="{rooms,id}"     /> 
+           <!-- <FLDropDown v-bind="rooms" />  -->
          <!-- </router-link> -->
   
 
@@ -54,13 +55,8 @@ export default {
       return { 
         // imgpath:'../assets/'+ Lt_5.png
         id:this.$route.params.id,
-        
-       rooms:[],
-        // rooms:this.floors[this.id],
-        // rooms:[],
-         
+        rooms:[],
       }
-
     },
     computed: {
     filter() {

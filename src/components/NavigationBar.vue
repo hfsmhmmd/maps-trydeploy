@@ -3,7 +3,7 @@
 
   <b-navbar class="fixed-bottom head d-xl-flex" >
     <!-- <div class="navbar"> -->
-         <b-navbar-brand class="HomeCon" href="">
+         <b-navbar-brand class="HomeCon" href="/#/">
             <img src="../assets/icon/Home_trimed.png" class="icon" alt="Kitten">
          </b-navbar-brand> 
          <b-navbar-brand href="/#/explore"  class="CompassCon">

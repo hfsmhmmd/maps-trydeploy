@@ -1,11 +1,11 @@
 <template >
 
 
-        <b-dropdown id="dropdown-1" text="Ruangan" class="m-md-2" split>
+    <b-dropdown id="dropdown-1" text="Ruangan" class="m-md-2" split>
           <!-- <router-link to="/roompage"> -->
-    <div v-for="(ruangan, i ) in rooms" :key="i" >
+        <div v-for="(ruangan, i ) in rooma.rooms" :key="i" >
      
-       <b-dropdown-item v-bind:to="'/roompage/'+ruangan">{{ruangan}}</b-dropdown-item>
+    <b-dropdown-item v-bind:to="'/roompage/'+rooma.id+'/'+ruangan">{{ruangan}}</b-dropdown-item>
 
     </div>
          <!-- </router-link> -->
@@ -22,7 +22,7 @@
 
 export default {
     name: 'FLDropDown',
-    props: ['rooms'],
+    props: ['rooma'],
     data(){
         return{
             floora:[],

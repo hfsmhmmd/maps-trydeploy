@@ -1,20 +1,24 @@
 <template>
   <div class="home">
-    <div class="semi-circle"></div>
+  <!-- <div class="upperCurve"> -->
+      <div class="semi-circle">
+        <div class="custom-shape-divider-top-1658029318">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill"></path>
+          </svg>
+        </div>
+      </div> 
+  <!-- </div>    -->
     <div class="welcome">
       <h2>Hello Visitors !</h2>
       <h3>Selamat datang di </h3>
     </div>
-      <!-- <div class="logo">
-        <img alt="Vue logo" src="../assets/logo_UAI_white.jpg">
-      </div> -->
 
     <div class="menu">
       <div class="toUAICon" >
-        <!-- <div class="logo" href="http://uai.ac.id/"> -->  
-        <a class="logo" href="http://uai.ac.id/">
-          <!-- <img alt="UAI logo" src="../assets/gedungUAI.jpg"> -->
-        <!-- </div> -->
+      
+        <a class="logo" href="http://uai.ac.id/"> 
+
          <b-card 
         overlay
         img-src="../assets/gedungUAI.jpg"
@@ -36,7 +40,7 @@
                    <h3>About Us</h3>
              </router-link> 
         </div>
-      <!-- <AboutUs/> -->
+  
      
         <div class="infoCon">
           <h3>Info Update
@@ -44,7 +48,7 @@
         </div>
       </div>
     </div>
-      <!-- <NavBar class="Nav"/> -->
+ 
     <NavBar/>
   </div>
 </template>
@@ -65,38 +69,81 @@ export default {
 *{
   display: flex;
 }
-/* nav{
-
-} */
-.semi-circle {
-  align-self: flex-start;
-  height: 70%; 
-  width: 150%; 
-  border-radius : 50%;             
-  background-color: #0E47A1; 
-  margin-top:0px;
-  transform: scale(2) rotateX(110deg);  
-  overflow:hidden;
-  align-items:center;
-  margin-left:50px;
-}
 
 
-.Nav{
-  border: 5px solid red;
-  width: 100%;
-
-}
 
 .home{
     flex-direction: column;
   background-color: white;
   height: 100%;
-  overflow: hidden;
-  /* border: 5px solid red; */
+  /* overflow: hidden; */
+  justify-content: flex-start;
+   gap: 10%;
 
-  justify-content: center;
-  /* align-content: center; */
+
+}
+
+
+.semi-circle {
+  position: relative;
+  /* align-self:flex-end ; */
+}
+.custom-shape-divider-top-1658029318 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;   
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1658029318 svg {
+    position: relative;
+    display: block;
+    width: calc(111% - 1.2%);
+    transform: translate(-8.5%);
+    height: 200px;
+      /* overflow: hidden; */
+  
+}
+
+.custom-shape-divider-top-1658029318 .shape-fill {
+    fill: #0E47A1;
+}
+
+/** For tablet devices **/
+/* @media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-top-1658029318 svg {
+        width: calc(300% + 1.3px);
+        height: 376px;
+    }
+} */
+
+/* @media (min-width:1281px) {
+.custom-shape-divider-top-1658029318 .shape-fill {
+    fill: #0E47A1;
+}
+
+
+.custom-shape-divider-top-1658029318 svg {
+    position: relative;
+    display: block;
+    width: calc(111% - 1.2%);
+    transform: translate(-8.5%);
+    height: 110px;
+}
+} */
+
+.lightblue{
+  background: #81B1EF;
+}
+
+
+
+
+
+.Nav{
+  border: 5px solid red;
+  width: 100%;
 
 }
 

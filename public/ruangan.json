@@ -5,27 +5,30 @@
      },
      {
         "Id": "2" ,
-        "ruangan":["lift", "dosen"," 201"]
+        "ruangan":["BPMU", "biroKeuangan","toilet","tanggaDarurat",
+                     "wakilRektor1","wakilRektor2","wakilRektor3","wakilRektor4",
+        "207","208","214","218","219","220"
+      ]
      },
      {
-        "Id": "3",
-        "ruangan":["lift", " 301"]
-     },
-     {
-        "Id": "4" ,
-        "ruangan":["lift", " 401"," 402"," 403"," 404"," 405"," 406"," 407"," 408"," 409" ]
-     },
-     {
-        "Id": "5" , 
-        "ruangan":["lift", " 501"," 502"," 503"," 505"," 505"," 506"," 507"," 508"," 509"]
-     },
+      "Id": "3",
+      "ruangan":["tangga darurat", "302", "toilet","pmkupe","pkpni", "protokoler", "ras","auditorium","312","309","310","biro sdm","316","panin","bni","astra"]
+   },
+   {
+      "Id": "4" ,
+      "ruangan":["lift", "bukopin","indonesia power","mega","pusat stuck jepang","bri","simpati zone","sekre fisip 413","server","pusat komputer","dekan fisip","dosen fisip","tangga darurat","dosen ilkom","toilet","perpus hukum","dosen f.h","dekan f.h","rapat","dosen hukum","sekre hukum","audio visual","ahli","guru besar","lab h.i","dosen h.i","415","monitor" ]
+   },
+   {
+      "Id": "5" , 
+      "ruangan":["lift", "tangga darurat","520","515","516","517","518","519","514 b","514 a","513 b","513 a","kelas 512 a","kelas 512 b","kelas 511 b","kelas 511 b","toilet","multimedia","lab bahasa mandarin","office","fakultas sastra","dosen","sekre fst","rapat","dekan, kaprodi"]
+   },
 
-     {
-        "Id": "6" ,
-        "ruangan":["lift", " 601"," 602"," 603"," 606"," 605"," 606"," 607"," 608"," 609"]
-     },
-     {
-        "Id": "7" ,
-        "ruangan":["lift", " 701"," 702"," 703"," 707"," 705"," 706"," 707"," 708"," 709"]
-     }
+   {
+      "Id": "6" ,
+      "ruangan":["lift", "601","602","605","606","607","608","610","613","614","615","616","617","618","619","toilet","lab perancangan sistem","lab optimasi dan simulasi","laboraturium elektro","toilet","tangga darurat"]
+   },
+   {
+      "Id": "7" ,
+      "ruangan":["lift", "kelas","resepsionis lab pbi","lab pbi","arsip psi","lab psycologi","dekan","prodi","dosen","staff sekre","panel ac","sekre","toilet","tangga darurat"]
+   }
 ]
