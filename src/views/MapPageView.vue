@@ -7,55 +7,51 @@
       <h2>Lantai {{$route.params.id}}</h2>
   </div>
 
-      
+          <FLDropDown :rooma="{rooms,id}"   /> 
      
     <div class=mapContainer>
-  
-      <img 
-        :src="getImgUrl(this.id)">
- 
-    </div>
-    
-    <!-- <div>
-               <img :src="getImgUrl(th is.id)" v-bind:alt="pic">
-    </div> -->
 
-     <!-- <div v-for="item in filter" :key="item.Id" class="card border-0 cardSpace" style="width: 18rem;">
-        
-          <li class="list-group-item bg-light"> {{item.toUpperCase()}}</li>
-          
-       </div> -->
-      <!-- <router-link v-bind:to="'/roompage/'+item.Id" > -->
-        <!-- <router-link to="/roompage">   -->
-          <FLDropDown :rooma="{rooms,id}"     /> 
-           <!-- <FLDropDown v-bind="rooms" />  -->
-         <!-- </router-link> -->
+      <v-zoomer  ref="zoomer"
+      style="width: 100%; height: 500px; border: solid 3px white"
+      :max-scale="10"
+      :zoomed.sync="zoom">  
+        <!-- <img
+            "
+             style="object-fit: cover;"
+             doubleClickToZoom=true>
+            
+          </v-zoomer> -->
+       <img
+        :src="getImgUrl(this.id)"
+        style="object-fit: contain; width: 100%; height: 100%"
+      />
+    </v-zoomer>
+
+    </div>
   
 
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-//hello
-// import FloorList from '@/components/FloorList.vue'
-// import FloorSB from '@/components/FloorSB.vue'
-
+import VueZoomer from 'vue-zoomer'
 import FLDropDown from '@/components/FLDropDown.vue'
-
+// import axios from 'axios'
 // import DropDRoomList from '@/components/DropDRoomList.vue'
 
 export default {
-  name: 'MapPageView',
+  // name: 'MapPageView',
   components: {
     FLDropDown,
-
+    VZoomer: VueZoomer.Zoomer,
+    // 'inner-image-zoom': InnerImageZoom,
   },
   data() {
       return { 
         // imgpath:'../assets/'+ Lt_5.png
         id:this.$route.params.id,
         rooms:[],
+        info:null
       }
     },
     computed: {
@@ -68,38 +64,32 @@ export default {
       
     }
 },
-     created() {
-        fetch('/ruangan.json').then(response => response.json())
-            .then((data) => this.rooms = data[this.id-1].ruangan)
-            // .then(this.floors = this.rooms)
-    },
-  // created() {
-
-  //   console.log(this.data);
-    
+  //      mounted () {
+  //   axios
+  //     .get('https://data.mongodb-api.com/app/data-rsvcw/endpoint/floorlist')
+  //     .then(response => (this.info = response.data))
   // },
+     created() {
+        fetch('/ruangan(1).json').then(response => response.json())
+            .then((data) => this.rooms = data[this.id-1].ruangan)
+
+    },
+
   methods: {
      getImgUrl(Id) {
     var images = require.context('../assets/', false, /\.png$/)
     return images('./Lt_' + Id + ".png")
   }
   },
-  // computed:{
-    
-  //    filtered:function(){
-  //     //  return this.Lantai;
-  //   return this.Lantai.filter((lantai)=>{
-  //     console.log(lantai.Id);
-  //     console.log(this.search)
-  //     return lantai.Id.match(this.search);
-  //   //        
-  //   });
-  //   }
-  //  }
 }
 
 </script>
 <style scoped>
+
+/* v-zoomer{
+  width: 500px;
+   height: 500px;
+} */
 
 .MapPage{
   padding-top: 30px;
@@ -122,9 +112,10 @@ export default {
 }
 
 img{
-  max-width: 90%;
+  max-width: 85%;
   border-radius: 5%;
    object-fit: cover;
+   transform:translate(0px, 0px)
 }
 .mapContainer{
   max-width:100%;
@@ -137,4 +128,16 @@ img{
     /* border: 5px solid red;  */
   min-width: 95%;
 }
+
+@media (min-width:1281px) {
+
+
+/* 
+img{
+  max-width: 50%;
+  border-radius: 5%;
+   object-fit: cover;
+} */
+}
+
 </style>

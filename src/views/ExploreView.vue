@@ -23,7 +23,7 @@
 </template>
 
 <script >
-import axios from 'axios';
+// import axios from 'axios';
 export default {
   name: 'ExploreView',
   components: {
@@ -39,19 +39,18 @@ export default {
       }
 
     },
-       mounted () {
-    axios
-      .get('https://data.mongodb-api.com/app/data-rsvcw/endpoint/floorlist')
-      .then(response => (this.info = response.data))
-  },
+  //      mounted () {
+  //   axios
+  //     .get('https://data.mongodb-api.com/app/data-rsvcw/endpoint/floorlist')
+  //     .then(response => (this.info = response.data))
+  // },
 
 
 
-    //  created() {
-    //     fetch('/ruangan.json').then(response => response.json())
-    //         .then((data) => this.floors = data);
-    // },
-
+     created() {
+        fetch('/ruangan.json').then(response => response.json())
+            .then((data) => this.floors = data);
+    },
 
 
 
@@ -62,15 +61,13 @@ export default {
   },   
  computed:{
      filtered:function(){
-      return this.info.filter((lantai)=>{
-  
-      
-      // console.log(this.search)
+      return this.floors.filter((lantai)=>{
+ 
       for(var i = 0; i < lantai.ruangan.length; i++)
 {
         if(lantai.ruangan[i].indexOf(this.search) != -1)
         {
-            //  console.log(search)
+ 
             return(lantai.ruangan[i]);
             
         }
@@ -86,9 +83,7 @@ export default {
 
 <style scoped>
 
-/* .sb-container{
-  background-color: rgb(71, 189, 71);
-} */
+
 .cardSpace{
   /* width: 100%;*/
    background-color:white ;
@@ -135,6 +130,9 @@ export default {
 
 .sbform{
   border-radius: 30px;
+  min-height: 45px;
+  width: 100%;
+  margin: 10px;
 }
 
 </style>

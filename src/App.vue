@@ -60,6 +60,11 @@ html, body{
   height: 100%;
   overflow: scroll;
   /* border: 5px solid green; */
+      background-image: linear-gradient(45deg, transparent 20%, black 25%, transparent 25%),
+                      linear-gradient(-45deg, transparent 20%, black 25%, transparent 25%),
+                      linear-gradient(-45deg, transparent 75%, black 80%, transparent 0),
+                      radial-gradient(gray 2px, transparent 0);
+    background-size: 30px 30px, 30px 30px;
     
 }
 nav{
