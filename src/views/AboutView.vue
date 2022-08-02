@@ -17,7 +17,10 @@
         <p>
           Kelompok dengan nama yang memiliki makna pembuka, awalan, dan kunci. 
 Dengan logo bersimbol pentagon berwarna kuning mengartikan bahwa kami berlima sebagai pionir berdirinya MYFTA dan warna kuning yang berkaitan erat dengan arti keagungan. Ini menjadi simbol bahwa kami 
-memiliki kapabilitas untuk mengatasi masalah yang dihadapi. Menjadi solusi di setiap masalah. Karena MYFTA #semuabisa
+memiliki kapabilitas untuk mengatasi masalah yang dihadapi. Menjadi solusi di setiap masalah.
+        </p>
+        <p>
+           Karena MYFTA #semuabisa
         </p>
         </div>
     </div>
@@ -33,6 +36,9 @@ export default {
 
 <style>
 
+h1{
+  color: white;
+}
 
 .about{
   display: flex;
@@ -46,16 +52,23 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+ border-radius: 5px;
+
+
+ /* width: 95%; */
+/* border: 5px solid black; */
 }
 .imgContainer{
   display: flex;
-  width: 90%;
+  width: 98%;
   justify-content: center;
-  background-color: white;
+ 
+  /* background-color: white; */
 }
 
 img{
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .lower{
