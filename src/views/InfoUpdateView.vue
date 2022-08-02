@@ -10,18 +10,6 @@
             <img src="../assets/Poster UAI MAPS.png" alt="">
     </div>
 
-    <div class="lower">
-      <div class="textcontainer">
-
-        <!-- <p>
-          Perkenalkan kami MYFTA!
-Kelompok dengan nama yang  memiliki makna pembuka, awalan, dan kunci. 
-Dengan logo bersimbol pentagon berwarna kuning mengartikan bahwa kami berlima sebagai pionir berdirinya MYFTA dan warna kuning yang berkaitan erat dengan arti keagungan. Ini menjadi simbol bahwa kami 
-memiliki kapabilitas untuk mengatasi masalah yang dihadapi. Menjadi solusi di setiap masalah. Karena MYFTA #semuabisa
-        </p> -->
-        </div>
-    </div>
-    
   </div>
 </template>
 
