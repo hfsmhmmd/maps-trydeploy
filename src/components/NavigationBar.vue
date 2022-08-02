@@ -9,7 +9,7 @@
          <b-navbar-brand href="/#/explore"  class="CompassCon">
             <img src="../assets/icon/Compass_trimed.png"  class="icon" alt="Kitten">
         </b-navbar-brand > 
-         <b-navbar-brand href="/#/explore"  class="infoCon">
+         <b-navbar-brand href="/#/about" class="infoCon">
            <img src="../assets/icon/info_trimed.png"  class="icon" alt="Kitten">
          </b-navbar-brand> 
     <!-- </div> -->
