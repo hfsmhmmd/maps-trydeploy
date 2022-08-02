@@ -1,24 +1,24 @@
 <template>
   <div class="about">
-
+<!-- 
     <h1>
-      About Us
-    </h1>
+      Info Updates
+    </h1> -->
+ 
     <div class="upper">
-      <div class="imgContainer">
-        <img src="../assets/abt_us.png" alt="">
-      </div>  
+            <h2> UAI MAPS Annual Poster</h2>
+            <img src="../assets/Poster UAI MAPS.png" alt="">
     </div>
+
     <div class="lower">
       <div class="textcontainer">
-        <p>
+
+        <!-- <p>
           Perkenalkan kami MYFTA!
-        </p>
-        <p>
-          Kelompok dengan nama yang memiliki makna pembuka, awalan, dan kunci. 
+Kelompok dengan nama yang  memiliki makna pembuka, awalan, dan kunci. 
 Dengan logo bersimbol pentagon berwarna kuning mengartikan bahwa kami berlima sebagai pionir berdirinya MYFTA dan warna kuning yang berkaitan erat dengan arti keagungan. Ini menjadi simbol bahwa kami 
 memiliki kapabilitas untuk mengatasi masalah yang dihadapi. Menjadi solusi di setiap masalah. Karena MYFTA #semuabisa
-        </p>
+        </p> -->
         </div>
     </div>
     
@@ -27,35 +27,33 @@ memiliki kapabilitas untuk mengatasi masalah yang dihadapi. Menjadi solusi di se
 
 <script>
 export default {
-    name: 'AboutView',
+    name: 'InfoUpdateView',
 }
 </script>
 
 <style>
-
-
 .about{
+    padding-top: 10px;
   display: flex;
   flex-direction: column;
- justify-content: center;
- gap: 30px;
+ justify-content: flex-start;
+ align-items: center;
+ overflow-y:scroll; 
+ height: 100%;
 
 }
 .upper{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-.imgContainer{
-  display: flex;
-  width: 90%;
-  justify-content: center;
-  background-color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 98%;
+    /* justify-content: center; */
 }
 
-img{
-  max-width: 100%;
+.upper Img{
+    width: 95%;
+    align-self: center;
+    margin: 5px;
 }
 
 .lower{
@@ -68,13 +66,8 @@ img{
 
 .textcontainer{
   width: 90%;
-  /* border: 5px solid white ; */
-  background-color: white;
+  border: 5px solid white ;
+  background-color: aliceblue;
   border-radius: 5px ;
-  padding: 5px;
-}
-
-p{
-    font-size: 19px;
 }
 </style>

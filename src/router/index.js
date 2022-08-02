@@ -5,6 +5,7 @@ import ExploreView from '../views/ExploreView.vue'
 import MapPageView from '../views/MapPageView.vue'
 import RoomPageView from '../views/RoomPageView.vue'
 import AboutView from '../views/AboutView.vue'
+import InfoUpdateView  from '../views/InfoUpdateView.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/about',
     name: 'AboutView',
     component: AboutView
+  },
+  {
+    path: '/infoupdate',
+    name: 'InfoUpdateView',
+    component: InfoUpdateView
   },
   // {
   //   path: '/about',

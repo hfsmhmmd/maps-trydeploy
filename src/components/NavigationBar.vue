@@ -4,13 +4,13 @@
   <b-navbar class="fixed-bottom head d-xl-flex" >
     <!-- <div class="navbar"> -->
          <b-navbar-brand class="HomeCon" href="/#/">
-            <img src="../assets/icon/Home_trimed.png" class="icon" alt="Kitten">
+            <img src="../assets/logo/Home.png" class="icon" alt="Kitten">
          </b-navbar-brand> 
          <b-navbar-brand href="/#/explore"  class="CompassCon">
-            <img src="../assets/icon/Compass_trimed.png"  class="icon" alt="Kitten">
+            <img src="../assets/logo/Compass.png"  class="icon" alt="Kitten">
         </b-navbar-brand > 
          <b-navbar-brand href="/#/about" class="infoCon">
-           <img src="../assets/icon/info_trimed.png"  class="icon" alt="Kitten">
+           <img src="../assets/logo/MYFTA.png"  class="icon" alt="Kitten">
          </b-navbar-brand> 
     <!-- </div> -->
  
@@ -56,10 +56,12 @@ export default {
   display: flex;
   justify-content: space-between;
 }
-/* 
-.HomeCon{
-  padding-left: ;
-} */
+
+.HomeCon ,.infoCon ,.CompassCon{
+ /* border: 1px solid green ; */
+ margin: -2.5px;
+  padding: 0px !important;
+}
 
 
 
@@ -67,9 +69,10 @@ export default {
   border: 5px solid red;
 } */
 .icon{
-  height:43px;
+  height:72px;
   /* border: 5px solid red; */
-  padding: 0 !important;
+  padding: 0px !important;
+  margin: -1.5px;
 }
 /* b-navbar{
   height: 100px;

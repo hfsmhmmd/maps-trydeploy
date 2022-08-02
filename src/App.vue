@@ -30,9 +30,14 @@ export default {
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;0,300;0,400;1,100&family=Nanum+Gothic&display=swap');
+
+
 #app{
    flex-direction: column;  
     overflow:hidden;
+  font-family: 'Bitter', sans-serif;
 }
 
 .rout{
@@ -65,9 +70,6 @@ html, body{
                       linear-gradient(-45deg, transparent 75%, black 80%, transparent 0),
                       radial-gradient(gray 2px, transparent 0);
     background-size: 30px 30px, 30px 30px; */
-
-
-
 
 background:
 radial-gradient(circle at 100% 50%, transparent 20%, rgba(255,255,255,.3) 21%, rgba(255,255,255,.3) 34%, transparent 35%, transparent),
