@@ -2,7 +2,7 @@
   <div id="app">
 
       <!-- <HomeView/> -->
-
+      
       <NavBar/>
 
       <nav>
